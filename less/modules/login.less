@@ -1,0 +1,205 @@
+/*-----------------------------------------------------------------------------------*/
+/* 10.0 - Login Modal Module Styles
+/*-----------------------------------------------------------------------------------*/
+.modal-backdrop.in {
+  .opacity(0.85);
+}
+
+.modal {
+
+  &.fade .modal-dialog {
+    .translate(0, -80%);
+  }
+  &.in .modal-dialog {
+    .translate(0, 0);
+  }
+}
+
+.modal-dialog {
+  margin: 10% auto 0;
+}
+
+.login-form-label {
+  display: none;
+  margin-bottom: 3px;
+}
+
+.login-form-input {
+  height: 45px;
+  padding: 3px 17px;
+}
+
+.login-form-input-common {
+  width: 100%;
+  border: none;
+}
+
+.form-element {
+  margin-bottom: 21px;
+
+  .error:not(input) {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.login-form-submit {
+  &:extend(.btn-default);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.password-section,
+.register-section {
+  display: none;
+}
+
+.form-heading {
+  margin-bottom: 26px;
+  font-size: 15px;
+  text-transform: uppercase;
+
+  .fa {
+    &:extend(.text-transition);
+  }
+
+  .fa-sign-in {
+    margin-right: 10px;
+  }
+}
+
+.close-modal-dialog {
+  margin-top: -1px;
+  padding: 0;
+  background: none;
+  border: none;
+  .user-select(none);
+}
+
+.sign-up {
+
+  > a {
+    margin-left: 9px;
+  }
+}
+
+.close-modal-dialog {
+  float: right;
+}
+
+.buttons-external {
+  position: relative;
+}
+
+.graphic {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+
+  > span {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.or {
+  .square(37px);
+  padding: 5px 0;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  border: 1px solid;
+  text-align: center;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 15px;
+}
+
+.circle {
+  .square(5px);
+  border-radius: 50%;
+}
+
+.vertical-line,
+.circle {
+  background-color: #cad7e3;
+}
+
+.button {
+  display: block;
+  margin-top: 10px;
+  padding: 12px 5px;
+  text-align: center;
+  &:extend(.btn-transition);
+
+  .fa {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+
+.facebook-button {
+  float: left;
+}
+
+.google-button {
+  float: right;
+}
+
+.modal-loader{
+  display: none;
+}
+
+.modal-loader,
+.modal-message,
+.modal-error{
+  margin: 10px 0;
+}
+
+@media (min-width: @screen-sm-min) {
+
+  .modal-dialog {
+    width: 470px;
+
+    .form-wrapper {
+      padding: 32px 32px 50px;
+    }
+  }
+
+  .buttons-external {
+    padding: 53px 32px 43px;
+  }
+
+  .button {
+    width: 49.5%;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+
+  .modal-dialog {
+    width: 300px;
+
+    .form-wrapper {
+      padding: 22px 22px 30px;
+    }
+  }
+
+  .buttons-external {
+    padding: 45px 22px 23px;
+  }
+
+  .login-link,
+  .sign-up,
+  .forgot-password {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

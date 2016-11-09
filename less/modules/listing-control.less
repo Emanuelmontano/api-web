@@ -1,0 +1,57 @@
+/*-----------------------------------------------------------------------------------*/
+/* 19.0 - Listing Control Module Styles
+/*-----------------------------------------------------------------------------------*/
+.page-listing-control{
+  margin-bottom: 40px;
+
+  .heading{
+    margin-top: 5px;
+    margin-bottom: 4px;
+    font-size: 18px;
+  }
+}
+
+.sort-controls{
+  width: 280px;
+}
+
+.sort-controls,
+.view-switcher{
+  float: right;
+}
+
+.view-btn{
+  display: inline-block;
+  float: left;
+  padding: 14px 18px 10px;
+  margin-right: 4px;
+  &:extend(.btn-transition);
+}
+
+@media (max-width: @screen-xs-max) {
+
+  .page-listing-control{
+    .col-xs-6{
+      width: 100%;
+    }
+
+    .heading {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  .sort-controls {
+    float: none;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .page-listing-control{
+
+    .heading{
+      font-size: 24px;
+    }
+  }
+}

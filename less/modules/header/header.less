@@ -1,0 +1,153 @@
+/*-----------------------------------------------------------------------------------*/
+/* 21.0 - Header Module Styles
+/*-----------------------------------------------------------------------------------*/
+/* Sticky Header Styles */
+@media( min-width: @screen-md-min ){
+  .inspiry-sticky-header .inspiry-sticked-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1500;
+  }
+}
+
+/* Contact Number Module Styles */
+.contact-number {
+  display: inline-block;
+  float: right;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: @line-height-base;
+
+  .contacts-icon-container {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: -4px;
+  }
+
+  a {
+    &:extend(.text-transition);
+  }
+}
+
+/* User Navigation Module Styles */
+.user-nav {
+  &:extend(.list-style-reset);
+
+  a {
+    font-size: 12px;
+    text-transform: uppercase;
+    &:extend(.btn-transition);
+  }
+
+  .fa {
+    position: relative;
+    top: 1px;
+    font-size: 16px;
+  }
+
+  .fa-th-list {
+    top: 2px;
+  }
+}
+
+/* Social Networks Module Styles */
+.social-networks {
+  &,
+  a {
+    display: inline-block;
+  }
+}
+
+.header-social-nav {
+  > a {
+    font-size: 19px;
+  }
+}
+
+/* Logo Module Styles */
+.site-logo {
+  display: table;
+  width: 100%;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.logo-inner-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// For Firefox to handle large size logo.
+@media (min-width: 1200px) {
+  @-moz-document url-prefix() {
+    .site-logo {
+      table-layout: fixed;
+    }
+  }
+}
+
+.site-title {
+  margin-bottom: 0;
+  font-family: @headings-font-family;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.tag-line {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.button-menu-close {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  z-index: 50;
+  width: 24px;
+  height: 24px;
+  padding-left: 1px;
+  margin-top: -12px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  &:extend(.btn-transition);
+}
+
+@media (min-width: @screen-md-min) {
+  .button-menu-reveal {
+    display: none;
+    float: left;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    .user-select(none);
+    &:extend(.btn-transition);
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .button-menu-reveal {
+    padding: 19px 25px;
+  }
+}
+
+@import "main-menu";
+
+@import "header-one";
+
+@import "header-two";
+
+@import "header-three";
+
+@import "header-mobile";
+
+@import "mean-menu";
+

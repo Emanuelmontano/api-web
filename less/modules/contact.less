@@ -1,0 +1,152 @@
+/*-----------------------------------------------------------------------------------*/
+/* 38.0 - Contact Module Styles
+/*-----------------------------------------------------------------------------------*/
+#map-canvas {
+  width: 100%;
+  height: 250px;
+}
+
+.col-left-side,
+.col-right-side {
+  padding: 40px;
+}
+
+.contact-details {
+
+  .hentry {
+    margin-bottom: 35px;
+  }
+
+  address {
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 6px;
+    padding-left: 25px;
+    font-size: 15px;
+  }
+
+  .list-title {
+    margin-bottom: 15px;
+    font-size: 21px;
+  }
+
+  .fa-map-marker {
+    font-size: 21px;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+}
+
+.contact-form {
+
+  input:not([type="submit"]),
+  textarea, {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 35px;
+    border: 1px solid;
+  }
+
+  input.error,
+  textarea.error {
+    outline: 2px solid;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+
+  #error-container {
+    margin-top: 20px;
+  }
+}
+
+#submit-button[disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  .opacity(.65);
+}
+
+.contact-form-heading {
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+#ajax-loader {
+  margin: 14px 15px;
+}
+
+#ajax-loader,
+#message-container,
+#error-container {
+  display: none;
+}
+
+#error-container {
+
+  label {
+    display: block;
+  }
+}
+
+.fa-map-marker:before {
+  margin-left: 1px;
+}
+
+.contacts-list {
+  list-style: none;
+  margin: 0 0 25px;
+  padding: 0;
+
+  > li {
+    padding: 6px 0;
+  }
+
+  .icon-clock {
+    position: relative;
+    padding-left: 25px;
+  }
+}
+
+.contacts-icon-container {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  vertical-align: -2px;
+}
+
+.icon-clock {
+
+  .contacts-icon-container {
+    margin-right: 0;
+    vertical-align: 0;
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .col-left-side {
+    padding: 45px 50px;
+  }
+
+  .col-right-side {
+    padding: 45px 62px 65px;
+  }
+}
+
+
+@media (min-width: @screen-md-min) {
+  #map-canvas {
+    height: 350px
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  #map-canvas {
+    height: 590px
+  }
+}

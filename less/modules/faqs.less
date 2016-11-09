@@ -1,0 +1,47 @@
+/*-----------------------------------------------------------------------------------*/
+/* 15.0 - Faqs Module Styles
+/*-----------------------------------------------------------------------------------*/
+.qe-faqs-filters-container {
+  margin-bottom: 30px;
+}
+
+.qe-faq-toggle {
+  margin-bottom: 10px;
+
+  .qe-toggle-title {
+    padding-left: 22px;
+    border: none;
+
+    i.fa {
+      margin-right: 13px;
+    }
+
+    .fa-plus-circle:before {
+      content: "\f067";
+    }
+  }
+
+  &.active .qe-toggle-title{
+    .fa-minus-circle:before {
+      content: "\f068";
+    }
+  }
+
+  .qe-toggle-content {
+    padding: 14px 30px;
+  }
+}
+
+.qe-faq-toggle.active .qe-toggle-title,
+.qe-faq-toggle .qe-toggle-title:hover,
+.qe-faq-toggle .qe-toggle-content {
+  border: none;
+}
+
+@media (min-width: @screen-sm-min) {
+  .qe-faqs-filters-container,
+  .qe-faqs-filterable{
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
